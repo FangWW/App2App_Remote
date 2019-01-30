@@ -1,0 +1,1 @@
+include ':app', ':assistantlib', ':app_client'

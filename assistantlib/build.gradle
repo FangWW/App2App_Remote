@@ -1,0 +1,16 @@
+android {
+
+}
+////打jar包
+//def SDK_BASENAME = "AssistantLib_V0.1";
+//def sdkJarPath = "build";
+//def zipFile = file('build/intermediates/packaged-classes/release/classes.jar')
+//
+//task makeJar(type: Jar) {
+//    from zipTree(zipFile)
+//    from fileTree(dir: 'src/main', includes: ['assets/**'])
+//    baseName = SDK_BASENAME
+//    destinationDir = file(sdkJarPath)
+//}
+//makeJar.dependsOn(build)
+//apply from: './gradle-mvn-push.gradle'

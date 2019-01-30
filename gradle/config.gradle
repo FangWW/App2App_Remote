@@ -1,0 +1,77 @@
+subprojects {
+    if (project.ignore.toBoolean()) {
+        return
+    }
+
+    dependencies {
+    }
+}
+
+
+project(':app') {
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+        // Kotlin
+        implementation Deps.kotlinStdlibJdk8
+
+        implementation Deps.supportV7
+        implementation Deps.constraintLayout
+        // JetPack
+        implementation Deps.workRuntime
+        implementation Deps.archExtensions
+        implementation Deps.archRuntime
+        kapt Deps.archCompiler
+
+        implementation Deps.ktx
+
+        // binding
+        implementation Deps.rxbindingKotlin
+
+        // Anko
+        implementation Deps.anko
+
+        implementation Deps.retrofitAdapterGson
+
+        implementation project(':assistantlib')
+    }
+}
+project(':app_client') {
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+        // Kotlin
+        implementation Deps.kotlinStdlibJdk8
+
+        implementation Deps.supportV7
+        implementation Deps.constraintLayout
+        // JetPack
+        implementation Deps.workRuntime
+        implementation Deps.archExtensions
+        implementation Deps.archRuntime
+        kapt Deps.archCompiler
+
+        implementation Deps.ktx
+
+        // binding
+        implementation Deps.rxbindingKotlin
+
+        // Anko
+        implementation Deps.anko
+
+        implementation project(':assistantlib')
+    }
+}
+
+project(':assistantlib') {
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+    }
+}
+subprojects {
+    configurations.all {
+        resolutionStrategy {
+            force Deps.rxAndroid2
+        }
+    }
+}

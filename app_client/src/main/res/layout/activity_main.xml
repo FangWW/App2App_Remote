@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/loacl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查询当前定位" />
+
+    <Button
+        android:id="@+id/loaclInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="根据经纬度查询当前街道信息" />
+
+    <Button
+        android:id="@+id/weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查询天气复杂对象（随机成功失败）" />
+
+</LinearLayout>
