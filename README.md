@@ -7,12 +7,12 @@ app 服务端 可远端调用
 app_client 客户端
 assistantlib 拥有调用service app 能力的library
 ```
-
+##### 特色
 ```
 通用性高
 异步调用
 基于Json数据传输
-就像http一样去调用其他app的功能，并支持返回结果
+简单就像http一样去调用其他app的功能，并支持返回结果
 //TODO 待实现
 //服务端app挂掉，30秒超时响应
 ```
